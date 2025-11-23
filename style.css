@@ -1,0 +1,290 @@
+:root {
+  --primary-color: #ff69b4; /* Hot Pink */
+  --secondary-color: #4169e1; /* Royal Blue */
+  --accent-color: #ffd700; /* Gold */
+  --bg-color: #1a1a2e;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://placehold.co/1200x400/1a1a2e/ff69b4?text=UMC+Cup"); /* Placeholder or gradient */
+  background-size: cover;
+  border-bottom: 4px solid var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+.hero .highlight {
+  color: var(--primary-color);
+  font-size: 4rem;
+  display: block;
+}
+
+.event-info {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 2px solid var(--primary-color);
+}
+
+.event-info p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  left: auto;
+  transform: none;
+  border-bottom: none;
+}
+
+.section-heading-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Rules */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.rule-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.rule-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 5px;
+}
+
+.rule-card ul {
+  list-style-type: none;
+}
+
+.rule-card li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.rule-card li::before {
+  content: "★";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Stadiums */
+.stadium-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stadium-list li {
+  background: var(--card-bg);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border-left: 5px solid var(--secondary-color);
+  transition: transform 0.2s;
+}
+
+.stadium-list li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.round-badge {
+  background: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+.stadium-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Prizes */
+.total-prize {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.total-prize .amount {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.prize-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.prize-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.prize-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.prize-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.sub-amount {
+  font-size: 1rem;
+  color: #ddd;
+  font-weight: normal;
+}
+
+.prize-desc {
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.prize-note {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.main-prize {
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 215, 0, 0.1),
+    rgba(0, 0, 0, 0.3)
+  );
+  border: 2px solid var(--accent-color);
+}
+
+.main-prize h3 {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.main-prize .prize-amount {
+  font-size: 3rem;
+}
+
+/* Sub Event */
+.sub-event-section {
+  text-align: center;
+}
+
+.sub-event-card {
+  background: linear-gradient(45deg, #333, #444);
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 2px dashed #666;
+}
+
+.sub-event-card h3 {
+  font-size: 1.8rem;
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #888;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .highlight {
+    font-size: 2.5rem;
+  }
+  .main-prize {
+    grid-column: auto;
+  }
+}

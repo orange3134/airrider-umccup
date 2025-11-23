@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#800000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Icon: VS / Swords -->
+  <g transform="translate(20, 10)">
+    <path d="M10 10 L50 50" stroke="#ff4444" stroke-width="6" stroke-linecap="round"/>
+    <path d="M50 10 L10 50" stroke="#ff4444" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="10" fill="#800000" stroke="white" stroke-width="2"/>
+    <text x="30" y="35" font-family="sans-serif" font-weight="bold" font-size="14" fill="white" text-anchor="middle">VS</text>
+  </g>
+  
+  <!-- Text -->
+  <text x="80" y="55" font-family="'M PLUS Rounded 1c', sans-serif" font-weight="bold" font-size="40" fill="white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+    サブイベント
+  </text>
+  
+  <!-- Underline -->
+  <rect x="80" y="65" width="220" height="4" fill="url(#grad4)" rx="2"/>
+</svg>
